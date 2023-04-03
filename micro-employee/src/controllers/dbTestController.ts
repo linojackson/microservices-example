@@ -9,7 +9,7 @@ export class dbTestController {
 		const syncDb = await db.sync({ force: true });
 
 		if (dropDb && syncDb) {
-			return response.status(200).json({ message: 'Database Refreshed' });
+			return response.status(200).json({ message: 'Database Refreshed!' });
 		}
 		return response.status(500).json({ message: 'Internal Server Error' });
 	}
